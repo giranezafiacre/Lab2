@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lab2</string>
+    <string name="image1">Aloha</string>
+    <string name="image2">Dev Girl</string>
+    <string name="buttonChange">Button Change</string>
+    <string name="enterComment">Your Idea</string>
+    <string name="buttonHello">Say hello</string>
+    <string name="enterName">Name</string>
+    <string name="greeting">Hello</string>
+</resources>
