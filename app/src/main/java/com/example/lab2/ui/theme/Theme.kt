@@ -73,13 +73,13 @@ fun Lab2Theme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable (
         content = content
     )
 }
-private val CMULightColorPalette = lightColors(
-    primary = CMUred,
-    primaryVariant = CMUredvariant,
+private val LABtwoLightColorPalette = lightColors(
+    primary = LABtwored ,
+    primaryVariant = LABtworedvariant,
     onPrimary = Color.White,
-    secondary = CMUreddark
+    secondary = LABtworeddark
 )
-val CMUTypography = Typography(
+val LABtwoTypography = Typography(
     body1 = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
@@ -97,16 +97,16 @@ val CMUTypography = Typography(
     )
 )
 @Composable
-fun CMUTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit){
+fun LABtwoTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit){
     val themeColors = if (darkTheme) {
-        CMULightColorPalette  //use dark color palette here
+        LABtwoLightColorPalette  //use dark color palette here
     } else {
-        CMULightColorPalette
+        LABtwoLightColorPalette
     }
     MaterialTheme(
         colors = themeColors,
-        typography = CMUTypography,
-        shapes = CMUShapes,
+        typography = LABtwoTypography,
+        shapes = LABtwoShapes,
         content = content
     )
 }

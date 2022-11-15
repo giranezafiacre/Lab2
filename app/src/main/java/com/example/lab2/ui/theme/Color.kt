@@ -9,9 +9,9 @@ val Teal200 = Color(0xFF03DAC5)
 
 //lab2 colors
 val Lab2blue = Color(0xff071B4A)
-val CMUreddark = Color(0xff8e0000)
+val LABtworeddark = Color(0xff8e0000)
 //val Lab2whitevariant = Color(0xffffffff)
 
 
-val CMUred = Color(0xffc62828)
-val CMUredvariant = Color(0xfff05545)
+val LABtwored = Color(0xffc62828)
+val LABtworedvariant = Color(0xfff05545)

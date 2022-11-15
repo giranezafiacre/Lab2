@@ -22,7 +22,7 @@ val Lab2Shapes = Shapes(
 )
 
 
-val CMUShapes = Shapes(
+val LABtwoShapes = Shapes(
 small = RoundedCornerShape(
 12.dp
 //        topStart = 12.dp,

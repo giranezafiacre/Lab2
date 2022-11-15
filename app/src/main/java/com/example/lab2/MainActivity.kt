@@ -90,7 +90,6 @@ fun ButtonUse(clicked: () -> Unit){
     Button(onClick= clicked) {
         Text(
             stringResource(id = R.string.buttonChange)
-            //style = MaterialTheme.typography.h2
         )
     }
 }
@@ -105,7 +104,6 @@ fun NameTextField(name: String, changed: (String) ->Unit){
         modifier = Modifier
             .fillMaxWidth()
             .padding(top = 10.dp, bottom = 10.dp)
-        //.clip(RoundedCornerShape(12.dp))
     )
 }
 
@@ -124,7 +122,7 @@ fun MessageText(newName: String){
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    CMUTheme(darkTheme = false) {
+    LABtwoTheme(darkTheme = false) {
         Greeting()
     }
 }
@@ -132,7 +130,7 @@ fun DefaultPreview() {
 @Preview(showBackground = true)
 @Composable
 fun DarkDefaultPreview() {
-    CMUTheme(darkTheme = true) {
+    LABtwoTheme(darkTheme = true) {
         Greeting()
     }
 }
