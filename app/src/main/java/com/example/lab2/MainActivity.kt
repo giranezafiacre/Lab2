@@ -44,20 +44,35 @@ fun Greeting() {
     var name by remember { mutableStateOf("") }
     var textFieldName by remember { mutableStateOf("") }
 
+    var condition by remember {
+        mutableStateOf(true)
+    }
+
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     )
     {
         NameTextField(name = textFieldName, changed = { textFieldName = it })
-        SayHi({ name = textFieldName })
+
         Image(
-            painter = painterResource(id = R.drawable.aloharisha),
-            contentDescription = stringResource(id = R.string.image1),
+            painter = painterResource(id = when(condition) {
+                true->R.drawable.bundo
+                false ->R.drawable.aloharisha
+            }),
+                contentDescription = stringResource(id =when(condition) {
+                    true->R.string.image1
+                    false ->R.string.image2
+                } ),
             modifier = Modifier
                 .padding(top = 40.dp, bottom = 40.dp)
                 .size(190.dp),
 
             )
+
+        ButtonUse{
+            name = textFieldName
+            condition = !condition
+        }
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier
@@ -71,7 +86,7 @@ fun Greeting() {
 }
 
 @Composable
-fun SayHi(clicked: () -> Unit){
+fun ButtonUse(clicked: () -> Unit){
     Button(onClick= clicked) {
         Text(
             stringResource(id = R.string.buttonChange)
@@ -79,6 +94,7 @@ fun SayHi(clicked: () -> Unit){
         )
     }
 }
+
 
 @Composable
 fun NameTextField(name: String, changed: (String) ->Unit){
